@@ -1,0 +1,22 @@
+plugins { id 'com.android.application' version '8.5.2' }
+android {
+    namespace 'com.yozz.store'
+    compileSdk 34
+    defaultConfig {
+        applicationId 'com.yozz.store'
+        minSdk 24
+        targetSdk 34
+        versionCode 1
+        versionName '1.0'
+    }
+    compileOptions { sourceCompatibility JavaVersion.VERSION_17; targetCompatibility JavaVersion.VERSION_17 }
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = ['.']
+            java.filter.include 'MainActivity.java'
+            assets.srcDirs = ['.']
+            assets.filter.include 'index.html'
+        }
+    }
+}
